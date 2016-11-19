@@ -1,0 +1,59 @@
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix schema:  <http://schema.org>
+@prefix :        <http://http://w3c.br/dwbp/#> .
+
+
+:dataset
+      a skos:Concept ;
+      a dcat:dataset ;
+      a schema:Dataset ;
+      skos:inScheme :evidenceCategories ;
+      skos:prefLabel "Dataset"@en ;
+      skos:prefLabel "Conjunto de Dados"@pt ;
+      .
+
+:guideline
+      a skos:Concept ;
+      skos:inScheme :evidenceCategories ;
+      skos:prefLabel "Guideline"@en ;
+      skos:prefLabel "Guideline"@pt ;
+      .
+
+:portal
+      a skos:Concept ;
+      skos:inScheme :evidenceCategories ;
+      skos:prefLabel "Data Portal"@en ;
+      skos:prefLabel "Portal de Dados"@pt ;
+      .
+
+:blog
+      a skos:Concept ;
+      a schema:Blog;
+      skos:inScheme :evidenceCategories ;
+      skos:prefLabel "Blog"@en ;
+      skos:prefLabel "Blog"@pt ;
+      .
+      
+:evidenceCategories
+      a skos:ConceptScheme ;
+      skos:prefLabel "A set of categories of evidencies" ;
+      .
+
+http://linkeddata.ge.imati.cnr.it/services.jsp
+	a :evidence ;
+	schema:category :dataset ;
+	:scope :national ;
+	dct:subject ;
+	dct:contributor ;
+	schema:spatialCoverage ;
+	:adoptspractice https://www.w3.org/TR/dwbp/#ProvideMetadata ;
+	:adoptspractice https://www.w3.org/TR/dwbp/#DescriptiveMetadata ;
+.
+
+
