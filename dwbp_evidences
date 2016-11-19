@@ -39,21 +39,49 @@
       skos:prefLabel "Blog"@en ;
       skos:prefLabel "Blog"@pt ;
       .
-      
+
 :evidenceCategories
       a skos:ConceptScheme ;
       skos:prefLabel "A set of categories of evidencies" ;
       .
 
-http://linkeddata.ge.imati.cnr.it/services.jsp
+:local
+      a skos:Concept ;
+      skos:inScheme :scope ;
+      skos:prefLabel "Local"@en ;
+      skos:prefLabel "Local"@pt ;
+      .
+:global
+      a skos:Concept ;
+      skos:inScheme :scope ;
+      skos:prefLabel "Global"@en ;
+      skos:prefLabel "Global"@pt ;
+
+:evidenceCategories
+      a skos:ConceptScheme ;
+      skos:prefLabel "A set of categories of evidencies" ;
+      .
+
+<http://linkeddata.ge.imati.cnr.it/services.jsp>
 	a :evidence ;
+	a schema:CreativeWork ;
 	schema:category :dataset ;
-	:scope :national ;
-	dct:subject ;
-	dct:contributor ;
-	schema:spatialCoverage ;
-	:adoptspractice https://www.w3.org/TR/dwbp/#ProvideMetadata ;
-	:adoptspractice https://www.w3.org/TR/dwbp/#DescriptiveMetadata ;
-.
+	schema:description "A multilingual Thesaurus Framework (TF) for the Environment" ;
+	dct:subject <http://vocabulary.worldbank.org/thesaurus/1490737> ;
+	dct:contributor :riccardo ;
+	schema:producer <http://linkeddata.ge.imati.cnr.it/> ;
+	:scope :global;
+	:adoptspractice <https://www.w3.org/TR/dwbp/#ProvideMetadata> ;
+	:adoptspractice <https://www.w3.org/TR/dwbp/#DescriptiveMetadata> ;
+	.
 
+<http://linkeddata.ge.imati.cnr.it/> 
+	a schema:Organization ;
+	schema:location <http://vocab.getty.edu/tgn/1000080> ;
+	.
 
+:riccardo
+	a foaf:Person, prov:Agent ;
+    foaf:givenName "Riccarso Albertoni" ;
+    foaf:mbox <mailto:criccardo.albertoni@ge.imati.cnr.it> ;
+    .

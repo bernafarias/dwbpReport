@@ -1,0 +1,110 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix :        <http://http://w3c.br/dwbp/#> .
+
+:metadata
+      rdf:type skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Metadata"@en ;
+      skos:prefLabel "Metadados"@pt ;
+      .
+
+:licenses
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Licenses"@en ;
+      skos:prefLabel "Licenças"@pt ;
+      .
+
+:provenance
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Provenance"@en ;
+      skos:prefLabel "Proveniencia"@pt ;
+      .
+
+:quality
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Quality"@en ;
+      skos:prefLabel "Qualidade"@pt ;
+      .
+
+:dataVersioning
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Versioning"@en ;
+      skos:prefLabel "Versionamento de Dados"@pt ;
+      .
+
+:dataIdentifiers
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Identifiers"@en ;
+      skos:prefLabel "Identificadores de Dados"@pt ;
+      .
+
+:dataFormats
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Formats"@en ;
+      skos:prefLabel "Formatos de Dados"@pt ;
+      .
+
+:dataVocabularies
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Vocabularies"@en ;
+      skos:prefLabel "Vocabularios de Dados"@pt ;
+      .
+
+:dataAccess
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Access"@en ;
+      skos:prefLabel "Acesso aos Dados"@pt ;
+      .
+
+:dataPreservation
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Preservation"@en ;
+      skos:prefLabel "Preservação de Dados"@pt ;
+      .
+
+:feedback
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Feedback"@en ;
+      skos:prefLabel "Feedback"@pt ;
+      .
+
+:republication
+      a skos:Concept ;
+      skos:inScheme :DWBPchallenges ;
+      skos:prefLabel "Data Republication"@en ;
+      skos:prefLabel "Republicacao de Dados"@pt ;
+      .
+
+:DWBPchallenges
+      a skos:ConceptScheme ;
+      skos:prefLabel "A set of DWBP challenges" ;
+.
+
+<https://www.w3.org/TR/dwbp/#ProvideMetadata>
+    a :practice ;
+    :practicelab "Provide metadata" ;
+    :practicedesc "Provide metadata for both human users and computer applications." ;
+    :practicechallenge :metadata ; 
+    .
+
+<https://www.w3.org/TR/dwbp/#DescriptiveMetadata>
+    a :practice ;
+    :practicelab "Provide descriptive metadata" ;
+    :practicedesc "Provide metadata that describes the overall features of datasets and distributions." ;
+    :practicechallenge :metadata ; 
+    .

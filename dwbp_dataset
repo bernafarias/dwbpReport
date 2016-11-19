@@ -1,0 +1,83 @@
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix pav:     <http://pav-ontology.github.io/pav/> .
+@prefix dqv:     <http://www.w3.org/ns/dqv#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix :        <http://http://w3c.br/dwbp/datasets/#> .
+
+
+:DWBP
+      a dcat:Dataset ;
+      dct:title "Data on the Web Best Practices" ;
+      dcat:keyword "data","web","best practice", "API", "vocabulary", "metadata" ;
+      dct:issued "2016-11-25"^^xsd:date ;
+      dcat:contactPoint :bfl ;
+      dcat:contactPoint :cburle ;
+      dcat:contactPoint :newton ;
+      dct:publisher :cewebbr ;
+      dct:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+      dcat:distribution :dwbp.csv ;
+      dcat:distribution :dwbp.ttl ;
+      dcat:distribution :dwbp.json ;
+      dcat:landingpage <https://www.w3.org/TR/dwbp/> ;
+      owl:versionInfo "1.0" ; 
+      pav:version "1.0" ; 
+      dct:creator :bfl ;  
+
+:bfl
+      a foaf:Person, prov:Agent ;
+      foaf:givenName "Bernadette Farias Loscio" ;
+      foaf:mbox <mailto:bfl@cin.ufpe.br> ;
+      prov:actedOnBehalfOf :cewebbr ; 
+      .
+
+:cburle
+      a foaf:Person, prov:Agent ;
+      foaf:givenName "Caroline Burle" ;
+      foaf:mbox <mailto:cburle@nic.br> ;
+      .
+
+:newton
+      a foaf:Person, prov:Agent ;
+      foaf:givenName "Newton Calegari" ;
+      foaf:mbox <mailto:newton@nic.br> ;
+      .
+
+:cewebbr
+      a foaf:Organization, prov:Agent ;
+      foaf:name "Centro de Estudos sobre Tecnologias Web " ;
+      .
+
+:dwbp.csv
+      a dcat:Distribution ;
+      dct:title "CSV distribution of the DWBP dataset" ;
+      dct:description "CSV distribution of the description of the Data on the Web Best Practices" ;
+      dcat:mediaType "text/csv;charset=UTF-8" ;
+      dcat:downloadURL xxx
+      .
+
+:dwbp.ttl
+      a dcat:Distribution ;
+      dct:title "ttl distribution of the DWBP dataset" ;
+      dct:description "ttl distribution of the description of the Data on the Web Best Practices" ;
+      dcat:mediaType "text/csv;charset=UTF-8" ;
+      dcat:downloadURL xxx
+      .
+
+:dwbp.json
+      a dcat:Distribution ;
+      dct:title "json distribution of the DWBP dataset" ;
+      dct:description "json distribution of the description of the Data on the Web Best Practices" ;
+	  dcat:mediaType "application/json" ;
+	  dcat:downloadURL xxx ;
+	  .
+
+
+   
